@@ -484,15 +484,26 @@ header{
   display: flex;
 }
 .portfoBox{
+  cursor: pointer;
   position: relative;
   transition: all 0.5s ease;
   /* flex-basis: 100%; */
   width: 34%;
   overflow: hidden;
 }
-.portfoBox:hover{
-  cursor: pointer;
+.portfoBox:nth-child(1){
   width: 50%;
+}
+.portfoBox:nth-child(3){
+  width: 50%;
+}
+.portfoBox img{
+  transition: all 1s ease;
+}
+.portfoBox:hover img{
+  cursor: pointer;
+  transform: scale(1.2);
+  /* width: 50%; */
 }
 .portBoxOverlay{
   position: absolute;
