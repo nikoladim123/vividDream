@@ -63,6 +63,9 @@ header{
   height: fit-content;
   /* border: 1px solid red; */
   padding-bottom: 9vw;
+  transition: all 1.3s ease;
+  transition-delay: 0.83s;
+  transform: scale(0);
 }
 
 .logo{
@@ -454,6 +457,8 @@ header{
 
 /* recentProjects start */
 .recentProjects{
+  width: 100%;
+  overflow: hidden;
   transition: 2s ease;
   position: relative;
   /* background: #33343b; */

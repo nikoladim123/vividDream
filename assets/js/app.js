@@ -1,9 +1,11 @@
 // header anim
 var baner = document.getElementsByClassName('baner');
+var headerContent = document.getElementsByClassName('headerContent');
 function banerFun() {
   baner[0].style.top = '0vh';
   baner[0].style.opacity = '1';
   baner[0].style.transform = 'scale(1)';
+  headerContent[0].style.transform = 'scale(1)';
   setTimeout(function () {
     baner[0].style.transition = '0s ease';
   }, 1300);
