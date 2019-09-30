@@ -101,8 +101,10 @@ header{
 
 /* secTwo */
 .secTwo{
+  transition: 1s ease;
   position: relative;
-  background: #d1c4a3;
+  /* background: #d1c4a3; */
+  background: rgba(196,178,122,1);
 }
 .stripes{
   transition: 1s ease;

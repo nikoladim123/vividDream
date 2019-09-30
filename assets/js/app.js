@@ -13,11 +13,15 @@ function banerFun() {
 
 // about double hover
 var stripes = document.getElementsByClassName('stripes');
+var secTwo = document.getElementsByClassName('secTwo');
+
 function stripesFun() {
   if(stripes[0].getClientRects()[0].top < window.innerHeight /3){
     stripes[0].style.opacity = '1';
+    secTwo[0].style.background = '#d1c4a3'
   }else{
     stripes[0].style.opacity = '0';
+    secTwo[0].style.background = 'rgba(196,178,122,1)'
   }
 }
 
