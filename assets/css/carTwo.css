@@ -2,7 +2,7 @@ body{
   margin: 0;
   background-color: rgb(249,242,242);
 }
-.sectionCar{
+.sectionCarTwo{
   transition: 2s;
   /* margin-top: 50vw; */
   height: 63vw;
@@ -10,8 +10,8 @@ body{
 }
 
 
-.carContainer{
-  margin-top: 10.243vw;
+.carContainerTwo{
+  /* margin-top: 10.243vw; */
   border-top: 4.195vw solid #3c4145;
   transition: 1.5s;
   /* border: 1px solid red; */
@@ -76,23 +76,19 @@ body{
   object-fit: cover;
 }
 
-.headingText{
+/* .headingText{
   position: absolute;
   top: 14vw;
   right: 70vw;
-  /* border: 1px solid blue; */
+  border: 1px solid blue;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 19vw;
-  /* display: none; */
-  /* background: rgba(255,0,0,0.5); */
-}
-
-.headingTextInside::-webkit-scrollbar {
-  width: 10px;
-}
-.headingTextInside{
+  display: none;
+  background: rgba(255,0,0,0.5);
+} */
+.headingTextInsideTwo{
   transition: 1.5s;
   padding-top: 10vw;
   padding-bottom: 10vw;
@@ -109,11 +105,17 @@ body{
   justify-content: center;
   background-clip: content-box;
 }
-.headingTextInside img{
-  width: 19vw;
+.headingTextInsideTwo::before{
+  content: '';
+  position: absolute;
+  top: 13vw;
+  left: 0;
+  width: 100%;
+  height: 10.669vw;
+  background: #c3b27a;
+  opacity: 0.9;
 }
-
-.headingTextInside h2{
+.headingTextInsideTwo h2{
   position: relative;
   top: -10vw;
   /* background: rgba(188, 137, 16, 0.7); */
@@ -124,15 +126,8 @@ body{
   font-size: 19.3517vw;
   font-family: 'Gorgeous-Bold.ttf';
 }
-.headingTextInside::before{
-  content: '';
-  position: absolute;
-  top: 13vw;
-  left: 0;
-  width: 100%;
-  height: 10.669vw;
-  background: #c3b27a;
-  opacity: 0.9;
+.headingTextInsideTwo img{
+  width: 19vw;
 }
 
 .button{
@@ -226,7 +221,7 @@ body{
   filter: brightness(115%);
 }
 
-.textBoxFixed{
+.textBoxFixedTwo{
   transition: 1.5s;
   overflow: hidden;
   /* border: 1px solid blue; */

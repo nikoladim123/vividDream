@@ -28,7 +28,7 @@
 }
 
 body{
-  padding-bottom: 10vw;
+  /* padding-bottom: 10vw; */
   margin: 0;
 }
 
@@ -373,11 +373,32 @@ header{
   overflow: hidden;
 }
 .servicesBox{
-  flex-basis: 100%;
+  position: relative;
+  transition: all 1s ease;
+  width: 0%;
   cursor: pointer;
+  flex-grow: 1;
   /* overflow: hidden; */
 }
-.servicesBox:hover img{
+.servicesBox:hover{
+  width: 65%;
+}
+
+.servicesBox::after{
+  transition: 0.5s ease;
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(255,255,255,0);
+}
+.servicesBox:hover:after{
+  background: rgba(255,255,255,0.92);
+}
+/* .servicesBox:hover img{
   transform: scale(1.3);
   z-index: 1;
 }
@@ -389,13 +410,14 @@ header{
 }
 .servicesBox:nth-child(3) img{
   transform-origin: bottom right;
-}
+} */
 .servicesBox img{
   position: relative;
   transition: all 0.5s ease;
   /* width: 100%; */
   /* object-fit: contain; */
-  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
 }
 /* secServices end */
 
@@ -452,6 +474,7 @@ header{
   position: relative;
   width: 36.28447vw;
   height: 36.28447vw;
+  transition: all 0.5s ease;
   /* border: 1px solid green; */
   display: inline-block;
 }
@@ -463,7 +486,7 @@ header{
 .recProjImageBox:hover{
   z-index: 1;
 }
-.recProjImageBox:hover img{
+.recProjImageBox:hover{
   cursor: pointer;
   transform: scale(1.2);
 }
@@ -557,3 +580,380 @@ header{
   margin-top: -9.4vw;
 }
 /* secPortfolio end */
+
+/* section notify me start */
+label{
+  font-weight: normal;
+}
+.labelBox p{
+  display: inline;
+}
+/* The container */
+.containerInput {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.containerInput input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.containerInput:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.containerInput input:checked ~ .checkmark {
+  background-color: pink;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.containerInput input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.containerInput .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.notifyMe{
+  position: relative;
+  height: 29.46vw;
+  background-color: black;
+  padding: 0.1px;
+  margin-top: 10.1845vw;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  /* flex-direction: column; */
+  /* margin-top: 1vw; */
+}
+
+.pinkFormBox{
+  position: relative;
+  padding: 0.1px;
+  height: 16.973vw;
+  width: 74.5424vw;
+  background-color: #e3d671;
+  /* box-shadow:  0px 49px 99px 3px rgba(241,88,102,0.9); */
+  right: 0;
+  /* top: -2.7306vw; */
+  display: flex;
+  flex-shrink: 0;
+  margin-top: 8.5vw;
+  align-items: center;
+}
+
+.pinkSectionForm{
+  /* border: 1px solid; */
+  position: relative;
+  /* margin-left: 27.8966vw; */
+  margin-top: 6.1992vw;
+  /* font-size: 2vw; */
+  margin-left: 4vw;
+}
+.pinkSectionForm h2{
+  font-family: 'Roboto-Bold.ttf';
+  letter-spacing: -3px;
+  margin: 0;
+  font-size: 2.656vw;
+  color: #33393e;
+  margin-bottom: 1vw;
+}
+.pinkSectionForm p{
+  font-weight: 800;
+  display: inline;
+  font-family: 'Roboto-Light.ttf';
+  color: #895a5b;
+  font-size: 1.18081vw;
+}
+.pinkFormTextInput{
+  height: 100%;
+  width: 18.6715vw;
+  background-color: transparent;
+  border: 2px solid #fff;
+  padding-left: 1vw;
+  font-size: 1.0332vw;
+  margin-left: 5.69vw;
+  box-sizing: border-box;
+}
+.pinkInBut{
+  display: flex;
+  position: relative;
+  margin-left: 12vw;
+  top: -3vw;
+  height: 3.1734vw;
+  box-sizing: border-box;
+}
+.pinkFormButton{
+  background: #fff;
+  height: 100%;
+  width: 3.1734vw;
+  border: 1px solid #fff;
+  font-size: 1.6236vw;
+  padding: 0.1px;
+  color: #895a5b;
+  font-family: 'Roboto-Light.ttf';
+  font-weight: 800;
+}
+
+.notifyImg{
+  height: 20.8535vw;
+  width: 20.368vw;
+  margin-left: 3vw;
+}
+/* section notify me end */
+
+/* insta section start */
+.secInstagram{
+  padding-top: 5.33462vw;
+  position: relative;
+  display: flex;
+  /* border: 1px solid red; */
+  margin-top: 4vw;
+  align-items: center;
+  padding-bottom: 5.81959vw;
+  justify-content: center;
+}
+.instagramSection h2{
+  width: 100%;
+  transition: 1.5s;
+  position: absolute;
+  text-align: center;
+  font-size: 2vw;
+  top: 2.5vw;
+  color: rgba(196,194,57,0.5);
+  font-family: 'Blacksword';
+  /* font-size: 3.9vw; */
+  font-size: 6.7vw;
+  margin: 0;
+  letter-spacing: 0.1vw;
+}
+.instagramSection h2 span{
+  transition: 1.5s;
+  font-size: 12.195vw;
+  /* font-size: 17.1vw; */
+  letter-spacing: -2vw;
+}
+
+.yellowInstagramBnd{
+  /* margin-top: 6.6829vw; */
+  transition: 2s;
+  top: 0vw;
+  left: -150%;
+  width: 150%;
+  height: 14.975vw;
+  position: relative;
+  /* background-color: #d5d163; */
+  background: linear-gradient(to right, rgba(213,209,99,0) 0%, rgba(213,209,99,1) 25%, rgba(213,209,99,1) 50%, rgba(213,209,99,1) 75%, rgba(213,209,99,0) 100%);
+
+}
+.yellowInstagramBndContainer{
+  overflow: hidden;
+  top: 5vw;
+  position: relative;
+  width: 100%;
+  height: 14.975vw;
+  /* border: 1px solid red; */
+}
+/* background: linear-gradient(to right, rgba(213,209,99,0) 0%, rgba(213,209,99,1) 25%, rgba(213,209,99,1) 50%, rgba(213,209,99,1) 100%); */
+.instagramSectionHTWO{
+  transition: 1s;
+  opacity: 0;
+  font-weight: 100;
+}
+
+.instagramTwoHtwo{
+  font-weight: 100;
+  top: auto !important;
+  bottom: -6vw;
+  opacity: 0;
+}
+.yellowInstagramBndContainerTwo{
+  top: auto;
+  bottom: 0vw;
+  width: 100%;
+}
+
+
+.gridBoxSpecial{
+  transition: 2s;
+  width: 70vw;
+  height: 41.463vw;
+  /* margin-left: 50%; */
+  /* margin-top: 16.341vw; */
+  /* margin-bottom: 2.63vw; */
+  /* left: -35vw; */
+  position: relative;
+  /* background: rgba(100,100,100,100.3); */
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  grid-template-rows: 33% 33% 33%;
+  grid-gap: 0.222vw;
+}
+.gridBoxSpecial img{
+  width: 100%;
+  height: 100%;
+}
+
+.gridBoxSpecial div{
+  position: relative;
+  overflow: hidden;
+}
+.gridBoxSpecial div:hover{
+  cursor: pointer;
+}
+.gridBoxSpecial div:nth-child(1) h2{
+  pointer-events: none;
+  font-family: 'Blacksword',serif;
+  position: relative;
+  z-index: 1;
+  writing-mode:tb-rl;
+  color: white;
+  font-size: 6vw;
+  margin: 0;
+  margin-top: -1.8vw;
+  margin-left: -2vw;
+  font-weight: 100;
+}
+.gridBoxSpecial div:nth-child(1){
+  background-color: rgb(235,217,110);
+  grid-row: 1/3;
+  grid-column: 1/2;
+}
+.gridBoxSpecial div:nth-child(2){
+  grid-row: 1/4;
+  grid-column: 2/3;
+}
+.gridBoxSpecial div:nth-child(3){
+  grid-row: 1/2;
+  grid-column: 3/4;
+}
+.gridBoxSpecial div:nth-child(4){
+  grid-row: 2/3;
+  grid-column: 3/4;
+}
+.gridBoxSpecial div:nth-child(5){
+  grid-row: 3/4;
+  grid-column: 3/4;
+}
+.gridBoxSpecial div:nth-child(6){
+  grid-row: 3/4;
+  grid-column: 1/2;
+}
+
+/* grid effect */
+.gridBoxSpecial div::after,.gridBoxSpecial div::after{
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: 1s;
+}
+.gridBoxSpecial div:hover:after,.gridBoxSpecial div:hover:after{
+  background-color: #ffa806;
+  opacity: 0.7;
+}
+.gridBoxSpecial div::before,.gridBoxSpecial div::before{
+  content: '';
+  display: block;
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%);
+  position: absolute;
+  width: 20%;
+  height: 180%;
+  top: 1px;
+  bottom: 1px;
+  /* opacity: 0.2;  */
+  top:-120%;
+  left: 10%;
+  transition: 2s;
+  transform: rotate(45deg);
+  /* z-index: 5; */
+}
+.gridBoxSpecial div:hover:before,.gridBoxSpecial div:hover:before{
+  top:100%;
+  left:100%;
+}
+/* grid effect */
+
+/* insta section end */
+
+/* footer start */
+footer{
+  display: block;
+  position: relative;
+  /* height: 44.1319vw; */
+  width: 100%;
+  overflow: hidden;
+}
+.footerStripes{
+  pointer-events: none;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.footerTopLayer{
+  height: 26.673vw;
+  background-color: #d1c4a3;
+}
+.footerBotLayer{
+  height: 16.00387vw;
+  border-top: 0.96993vw solid #c3b27a;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding-top: 0vw; */
+  /* padding-bottom: 0vw; */
+}
+
+.footerlogo{
+  width: 36.226vw;
+  position: relative;
+}
+/* footer end */
