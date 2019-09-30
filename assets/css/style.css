@@ -33,12 +33,19 @@ body{
 }
 
 header{
+  overflow: hidden;
+  width: 100%;
   display: flex;
 }
 
 .baner{
   position:relative;
   width: 100%;
+  transition: all 1.3s ease;
+  top: 100vh;
+  opacity: 0.2;
+  transform-origin: top;
+  transform: scale(2);
 }
 
 .headerContent{
@@ -381,8 +388,10 @@ header{
   /* overflow: hidden; */
 }
 .servicesBox:hover{
-  width: 65%;
+  width: 85%;
 }
+
+
 
 .servicesBox::after{
   transition: 0.5s ease;
@@ -470,6 +479,20 @@ header{
   justify-content: space-around;
   padding: 0vw 2vw 0vw 2vw;
 }
+.recProjBoxContainer:nth-child(1){
+  transform-origin: left;
+}
+.recProjBoxContainer:nth-child(2){
+  transform-origin: right;
+}
+.recProjBoxContainer{
+  transition: all 0.5s ease;
+  /* border: 1px solid red; */
+}
+.recProjBoxContainer:hover{
+  transform: scale(1.2);
+  z-index: 1;
+}
 .recProjImageBox{
   position: relative;
   width: 36.28447vw;
@@ -477,6 +500,29 @@ header{
   transition: all 0.5s ease;
   /* border: 1px solid green; */
   display: inline-block;
+  transform: rotate(45deg);
+  overflow: hidden;
+}
+.recProjImageBox::before{
+  content: '';
+  display: block;
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%);
+  position: absolute;
+  width: 20%;
+  height: 180%;
+  top: 1px;
+  bottom: 1px;
+  /* opacity: 0.2;  */
+  top:-120%;
+  left: 10%;
+  transition: 2s;
+  transform: rotate(45deg);
+  z-index: 5;
+  pointer-events: none;
+}
+.recProjImageBox:hover:before{
+  top:100%;
+  left:100%;
 }
 .recProjImageBox:nth-child(3){
   /* margin-left: 50%; */
@@ -486,14 +532,13 @@ header{
 .recProjImageBox:hover{
   z-index: 1;
 }
-.recProjImageBox:hover{
+.recProjImageBox img:hover{
   cursor: pointer;
   transform: scale(1.2);
 }
 .recProjImageBox img{
   transition: all 0.5s ease;
   width: 100%;
-  transform: rotate(45deg);
   /* transition: rot; */
 }
 /* recentProjects end */
@@ -528,7 +573,11 @@ header{
   transform: scale(1.2);
   /* width: 50%; */
 }
+.portfoBox:hover .portBoxOverlay{
+  background-color: rgba(0,0,0,0.3);
+}
 .portBoxOverlay{
+  transition: 0.5s ease;
   position: absolute;
   width: 100%;
   height: 100%;

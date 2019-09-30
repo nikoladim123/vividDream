@@ -186,7 +186,7 @@ body{
 
 .leftTextBox h2 {
   margin-left: 4vw;
-  font-family: 'Montserrat-Bold';
+  font-family: 'Roboto-Bold.ttf';
   font-size: 2.214vw;
 }
 
@@ -195,7 +195,8 @@ body{
   padding-right: 5vw;
   font-size: 1.107vw;
   color: rgb(153,153,153);
-  font-family: 'Montserrat-Regular';
+  font-family: 'Roboto-Light.ttf';
+  font-weight: 800;
   line-height: 2;
 }
 

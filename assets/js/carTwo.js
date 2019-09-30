@@ -15,7 +15,7 @@ elem = `
   </div>
   <div class="headingText">
     <div class="headingTextInsideTwo">
-      <h2>TESTIMONIALS</h2>
+      <h2>LATEST BLOG</h2>
     </div>
   </div>
   <div class="leftTextBox">
