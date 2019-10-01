@@ -11,7 +11,7 @@ body{
 
 
 .carContainer{
-  margin-top: 10.243vw;
+  /* margin-top: 10.243vw; */
   border-top: 4.195vw solid #3c4145;
   transition: 1.5s;
   /* border: 1px solid red; */

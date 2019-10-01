@@ -82,6 +82,8 @@ header{
   margin: 0;
   margin-top: 30vw;
   margin-bottom: -16vw;
+  transition: 1s ease;
+  transform: scale(0.4);
 }
 
 .headerContent h2{
@@ -223,7 +225,7 @@ header{
   position: relative;
   font-size: 1.4vw;
   margin-left: 0vw;
-  color:#b83e65;
+  color: #551918;
   filter: brightness(1);
   font-family: 'Roboto-Light.ttf';
   font-weight: 800;
@@ -374,6 +376,7 @@ header{
   position: relative;
   background: #313236;
   padding-bottom: 14.02999vw;
+  z-index: 1;
 }
 .secServices h2{
   font-size: 29.0275vw;
@@ -382,6 +385,9 @@ header{
   text-align: center;
   margin: 0;
   margin-top: -10.74vw;
+  transform: scale(.5);
+  transform-origin: top;
+  transition: 1.3s ease;
 }
 .secServices h3{
   font-size: 2.9027vw;
@@ -391,10 +397,13 @@ header{
   font-weight: 100;
   margin: 0;
   margin-top: -8.4vw;
+  transition: 1.3s ease;
+  transition-delay: 1s;
+  opacity: 0;
 }
 .servicesContainer{
   width: 100%;
-  height: 37vw;
+  height: 43vw;
   display: flex;
   position: absolute;
   bottom: 0;
@@ -451,21 +460,28 @@ header{
   position: relative;
   transition: all 0.5s ease;
   /* width: 100%; */
-  /* object-fit: contain; */
+  object-fit: cover;
+  object-position: center;
   min-width: 100%;
-  min-height: 100%;
+  width: 5.2vw;
+  /* min-height: 100%; */
+  /* max-height: 100%; */
+  height: 100%;
 }
 /* secServices end */
 
 /* recentProjects start */
 .recentProjects{
   width: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
+  /* overflow-x: hidden; */
   transition: 2s ease;
   position: relative;
+  z-index: 3;
   /* background: #33343b; */
   background: #fff;
-  padding-bottom: 36.3vw;
+  padding-bottom: 23vw;
+  position: relative;
 }
 
 .recentProjectsTextBox{
@@ -485,7 +501,11 @@ header{
   font-family: 'Gorgeous-Bold.ttf';
   margin: 0;
   user-select: none;
+  z-index: 24234;
   writing-mode: tb;
+  position: relative;
+  top: 7vw;
+  transition: 1s ease;
 }
 .recentProjectsTextBox h3{
   font-size: 9.67585vw;
@@ -506,9 +526,11 @@ header{
   /* border: 1px solid black; */
   display: flex;
   flex-wrap: wrap;
-  margin-top: -29vw;
+  margin-top: -44vw;
   justify-content: space-around;
-  padding: 0vw 2vw 0vw 2vw;
+  overflow: hidden;
+  padding-top: 15vw;
+  padding-bottom: 14vw;
 }
 .recProjBoxContainer:nth-child(1){
   transform-origin: left;
@@ -556,8 +578,6 @@ header{
   left:100%;
 }
 .recProjImageBox:nth-child(3){
-  /* margin-left: 50%; */
-  /* left: -18.14vw; */
   margin-top: -5vw;
 }
 .recProjImageBox:hover{
@@ -568,19 +588,115 @@ header{
   transform: scale(1.2);
 }
 .recProjImageBox img{
+  position: relative;
   transition: all 0.5s ease;
   width: 100%;
   /* transition: rot; */
+}
+
+.poUpCarContainer{
+  z-index: 5;
+  /* border: 1px solid yellow; */
+  position: fixed;
+  bottom: 0;
+  height: 0vh;
+  width: 100%;
+  transition: 1.3s ease;
+  overflow: hidden;
+}
+.poUpImg{
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+.popUpLeft{
+  transition: 0.5s ease;
+  background: rgba(255,255,255,0.3);
+  height: 100%;
+  width: 7.26744vw;
+  position: absolute;
+  left: 0;
+  top: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.popUpRight{
+  cursor: pointer;
+  transition: 0.5s ease;
+  background: rgba(255,255,255,0.3);
+  height: 100%;
+  width: 7.26744vw;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.popUpLeft:hover,
+.popUpRight:hover{
+  background: rgba(255,255,255,0.6);
+}
+.popUpLeft:hover p,
+.popUpRight:hover p{
+  opacity: 0.9;
+}
+.popUpLeft p,
+.popUpRight p{
+  font-size: 4vw;
+  transform: scale(1,4);
+  font-weight: 100;
+  transition: 0.5s ease;
+  opacity: 0.67;
+}
+.popUpCloseBox{
+  cursor: pointer;
+  width: 7.26744vw;
+  height: 7.26744vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-family: 'Roboto-Light.ttf';
+}
+.popUpCloseBox:hover p{
+  opacity: 0.9;
+}
+.popUpCloseBox p {
+  transition: 0.5s ease;
+  font-size: 6vw;
+  font-weight: 100;
+  opacity: 0.67;
+  pointer-events: none;
+  user-select: none;
+}
+.popUpOverlay{
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: white;
+  transition: 0.15s;
+  opacity: 0;
 }
 /* recentProjects end */
 
 /* secPortfolio start */
 .secPortfolio{
   position: relative;
+  z-index: 4;
+  height: 100vh;
 }
 .portfoContent{
   width: 100%;
   display: flex;
+  height: 100%;
 }
 .portfoBox{
   cursor: pointer;
@@ -598,6 +714,7 @@ header{
 }
 .portfoBox img{
   transition: all 1s ease;
+  height: 100%;
 }
 .portfoBox:hover img{
   cursor: pointer;
@@ -649,6 +766,9 @@ header{
   font-family: 'Gorgeous-Bold.ttf';
   font-size: 33.865vw;
   margin: 0;
+  transform: scale(0.5);
+  transform-origin: bottom;
+  transition: 1s ease;
 }
 .secPortTextContainer h3{
   color: #a79d85;
@@ -658,6 +778,9 @@ header{
   letter-spacing: 0.01vw;
   margin: 0;
   margin-top: -9.4vw;
+  opacity: 0;
+  transition: 1s;
+  transition-delay: 1s;
 }
 /* secPortfolio end */
 
@@ -825,6 +948,7 @@ label{
 
 /* insta section start */
 .secInstagram{
+  transition: 1.5s ease;
   padding-top: 5.33462vw;
   position: relative;
   display: flex;
@@ -833,6 +957,7 @@ label{
   align-items: center;
   padding-bottom: 5.81959vw;
   justify-content: center;
+  background: #3c4145;
 }
 .instagramSection h2{
   width: 100%;
@@ -1028,8 +1153,6 @@ footer{
   display: flex;
   justify-content: center;
   align-items: center;
-  /* padding-top: 0vw; */
-  /* padding-bottom: 0vw; */
 }
 
 .footerlogo{

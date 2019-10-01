@@ -24,7 +24,7 @@ elem = `
       <img onclick="rightTest()" class="rightArrow" src="assets/images/rightArrow.jpg" alt="">
     </div>
     <div class="button buttonCar">
-      <p>Travel</p>
+      <p>Visit</p>
     </div>
     <p class="carDate">11/22/2018</p>
     <div class="textBoxFixed">
