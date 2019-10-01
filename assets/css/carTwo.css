@@ -33,17 +33,18 @@ body{
   height: 34.146vw;
   background: rgb(253,247,247);
   top: 0;
-  margin-top: 20.186vw;
+  margin-top: 25.186vw;
   right: 53.21vw;
   box-shadow: 0px 0px 88px -41px rgba(0,0,0,0.70);
 }
 
-.rightCarBox {
+.sectionCarTwo .rightCarBox {
   /* border: 1px solid blue; */
   height: 44.525vw;
   width: 66.476vw;
   position: absolute;
   right: 3.394vw;
+  top: 10vw;
 }
 .rightCarBox::after {
     content: '';
@@ -92,8 +93,8 @@ body{
   transition: 1.5s;
   padding-top: 10vw;
   padding-bottom: 10vw;
-  overflow-y: visible;
-  overflow-x: hidden;
+  /* overflow-y: visible; */
+  overflow: hidden;
   position: absolute;
   /* width: 20vw; */
   height: 20vw;
@@ -116,6 +117,7 @@ body{
   opacity: 0.9;
 }
 .headingTextInsideTwo h2{
+  white-space: nowrap;
   position: relative;
   top: -10vw;
   /* background: rgba(188, 137, 16, 0.7); */

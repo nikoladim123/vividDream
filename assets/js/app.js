@@ -38,7 +38,7 @@ var popUpOverlay = document.getElementsByClassName('popUpOverlay');
 for (var i = 0; i < recProjImg.length; i++) {
   recProjImg[i].addEventListener('click',(e)=>{
     poUpCarContainer[0].style.height = '100vh';
-    poUpImg[0].src = e.target.getAttribute('src');
+    poUpImg[0].src = 'assets/images/popupCar/0.jpg';
     console.log(e.target.getAttribute('src'));
   })
 }
@@ -55,9 +55,10 @@ function popUpFlash() {
   }, 150);
 }
 
-var imgInt = 0;
+var imgInt = 10;
 function popUpChangeimageFun() {
-  poUpImg[0].src = recProjImg[imgInt%3].getAttribute('src');
+  // poUpImg[0].src = recProjImg[imgInt%3].getAttribute('src');
+  poUpImg[0].src = 'assets/images/popupCar/' + imgInt%3 + '.jpg';
 }
 
 popUpLeft[0].addEventListener('click',()=>{
