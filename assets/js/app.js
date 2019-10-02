@@ -38,10 +38,19 @@ var popUpOverlay = document.getElementsByClassName('popUpOverlay');
 for (var i = 0; i < recProjImg.length; i++) {
   recProjImg[i].addEventListener('click',(e)=>{
     poUpCarContainer[0].style.height = '100vh';
-    poUpImg[0].src = 'assets/images/popupCar/0.jpg';
-    console.log(e.target.getAttribute('src'));
+    // poUpImg[0].src = 'assets/images/popupCar/0.jpg';
+    // console.log(e.target.getAttribute('src'));
   })
 }
+recProjImg[0].addEventListener('click',(e)=>{
+  poUpImg[0].src = 'assets/images/popupCar/0.jpg';
+});
+recProjImg[1].addEventListener('click',(e)=>{
+  poUpImg[0].src = 'assets/images/popupCar/2.jpg';
+})
+recProjImg[2].addEventListener('click',(e)=>{
+  poUpImg[0].src = 'assets/images/popupCar/1.jpg';
+})
 
 popUpCloseBox[0].addEventListener('click',()=>{
   poUpCarContainer[0].style.height = '0vh';
@@ -128,6 +137,19 @@ function paralaxFun() {
   // console.log(window.pageYOffset);
 }
 
+// arrow arrowToTop
+var arrowToTop = document.getElementsByClassName('arrowToTop');
+var secTwo = document.getElementsByClassName('secTwo');
+function arrowToTopFun() {
+  if(secTwo[0].getBoundingClientRect().top - window.innerHeight /1.2 <= 0 ){
+    arrowToTop[0].style.opacity = '0.31'
+    arrowToTop[0].style.pointerEvents = 'auto'
+  }else{
+    arrowToTop[0].style.opacity = '0'
+    arrowToTop[0].style.pointerEvents = 'none'
+  }
+}
+
 // window event listeners
 // window event listeners
 // window event listeners
@@ -143,4 +165,5 @@ window.addEventListener('scroll',()=>{
   headerHoneFun();
   servicesHeadingFun();
   portfolioHeaderFun();
+  arrowToTopFun();
 });

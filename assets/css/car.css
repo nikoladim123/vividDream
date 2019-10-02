@@ -5,14 +5,17 @@ body{
 .sectionCar{
   transition: 2s;
   /* margin-top: 50vw; */
-  height: 63vw;
+  height: 73vw;
+  background-color: rgb(60, 65, 69);
   position: relative;
+  background-image: url("../images/stripes.png");
+  background-size: 100% auto;
 }
 
 
 .carContainer{
   /* margin-top: 10.243vw; */
-  border-top: 4.195vw solid #3c4145;
+  border-top: 4.195vw solid transparent;
   transition: 1.5s;
   /* border: 1px solid red; */
   position: absolute;
@@ -22,7 +25,7 @@ body{
   right: 0;
   padding-top: 10vw;
   /* height: 55vw; */
-  background-color: #3c4145;
+  /* background-color: #3c4145; */
   overflow: hidden;
   z-index: 1;
 }

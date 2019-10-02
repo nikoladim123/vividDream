@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/css/carTwo.css">
   </head>
   <body>
-    <header>
+    <header id="toTop">
       <img class="baner" src="assets/images/baner.jpg" alt="">
       <div class="headerContent">
         <img class="logo" src="assets/images/logo.png" alt="">
@@ -103,10 +103,16 @@
     <div class="poUpCarContainer">
       <img class="poUpImg" src="" alt="">
       <div class="popUpLeft">
-        <p><</p>
+        <!-- <p><</p> -->
+        <div class="popUpLeftArrowBox">
+          <div class="popUpLeftArrow"></div>
+        </div>
       </div>
       <div class="popUpRight">
-        <p>></p>
+        <!-- <p>></p> -->
+        <div class="popUpLeftArrowBox rightPopArrow">
+          <div class="popUpLeftArrow"></div>
+        </div>
       </div>
       <div class="popUpCloseBox">
         <p>X</p>
@@ -147,7 +153,7 @@
     </section>
 
     <!-- sec car funy -->
-    <section class="sectionCar testimonialsSection" style="border-top: 3vw solid rgb(60, 65, 69);"><div class="carContainer">
+    <section class="sectionCar testimonialsSection" ><div class="carContainer">
     <!-- <img class="funnyCarBG" src="assets/images/stripes.png" alt=""> -->
       <div class="rightCarBox">
         <img  src="assets/images/slider/1.jpg" alt="">
@@ -328,6 +334,12 @@
       </div>
       <img class="footerStripes" src="assets/images/stripes.png" alt="">
     </footer>
+
+    <a href="#toTop">
+      <div class="arrowToTop" >
+        <p>&gt;</p>
+      </div>
+    </a>
 
     <script src="assets/js/app.js" charset="utf-8"></script>
     <script src="assets/js/car.js" charset="utf-8"></script>
