@@ -70,6 +70,16 @@ function popUpChangeimageFun() {
   poUpImg[0].src = 'assets/images/popupCar/' + imgInt%3 + '.jpg';
 }
 
+setInterval(function () {
+  if (poUpImg[0].clientHeight > window.innerHeight) {
+    popUpRight[0].style.height = poUpImg[0].clientHeight + 'px';
+    popUpLeft[0].style.height = poUpImg[0].clientHeight + 'px';
+  }else{
+    popUpRight[0].style.height = '100%';
+    popUpLeft[0].style.height = '100%';
+  }
+}, 150);
+
 popUpLeft[0].addEventListener('click',()=>{
   imgInt--;
   popUpFlash();

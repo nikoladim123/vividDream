@@ -618,8 +618,8 @@ header{
 .poUpImg{
   max-width: 100%;
   /* min-height: 100%; */
-  height: auto;
-  /* object-fit: cover; */
+  height: fit-content;
+  /* object-fit: contain; */
 }
 .popUpLeftArrowBox{
   transform: skewX(10deg);
